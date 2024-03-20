@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Это каршеринг.</title>
+
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=e36bea28-eac7-4c8c-8cec-51adc2e8c681&lang=ru_RU" type="text/javascript"></script>
+
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+
+    <link rel="icon" href="/fav.png" type="image/png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
+</head>
+<body>
+<h1 class="title" >Это каршеринг.<br>Welcome</h1>
+<br>
+
+<a href="/trips">Мои поездки</a>
+
+
+<h1>Карта</h1>
+
+<div class="wrapper">
+    <div class="map" id="map"></div>
+    <div class="card" id="carInfo">Нажмите на иконку машины,<br>чтобы ее забронировать</div>
+</div>
+
+
+<script>
+    ymaps.ready(init);
+
+    function init() {
+        var myMap = new ymaps.Map('map', {
+            center: [55.670020, 37.466500],
+            zoom: 15
+        });
+
+        function updateCarInfo(carData) {
+            var carInfoElement = document.getElementById('carInfo');
+            carInfoElement.innerHTML = '<h2>' + carData.hintContent + '</h2>' +
+                '<p>' + carData.balloonContent + '</p>' +
+                '<form action="/booking?carName=' + carData.hintContent + '&carPrice=' + carData.balloonContent + '" method="post">\n' +
+                '    <button type="submit">Взять в аренду</button>\n' +
+                '</form>';
+        }
+
+
+        // Добавление метки на карту
+        var car1 = new ymaps.Placemark([55.670907, 37.477061], {
+            hintContent: 'VW Polo IV',
+            balloonContent: '20rub/min'
+        },
+            {
+                // iconLayout: 'default#image', // Использование изображения в качестве значка
+                // iconImageHref: '/static/polo.jpg', // Путь к вашему изображению машины
+                // iconImageSize: [100, 100]
+            });
+
+        var car2 = new ymaps.Placemark([55.669460, 37.471205], {
+                hintContent: 'KIA Rio X',
+                balloonContent: '19rub/min'
+            },
+            {
+                preset: 'islands#taxiIcon'
+            });
+
+        var car3 = new ymaps.Placemark([55.669041, 37.463021], {
+                hintContent: 'Toyota Camry',
+                balloonContent: '25rub/min'
+            },
+            {
+                preset: 'islands#taxiIcon'
+            });
+
+
+        car1.events.add('click', function (e) {
+            updateCarInfo(car1.properties.getAll());
+        });
+
+        car2.events.add('click', function (e) {
+            updateCarInfo(car2.properties.getAll());
+        });
+
+        car3.events.add('click', function (e) {
+            updateCarInfo(car3.properties.getAll());
+        });
+
+        myMap.geoObjects.add(car1);
+        myMap.geoObjects.add(car2);
+        myMap.geoObjects.add(car3);
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Мои поездки</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+
+    <link rel="icon" href="/fav.png" type="image/png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="tripList">
+    <h1>Ваши поездки</h1>
+    <ul>
+        <li th:each="trip : ${trips}">
+            <p>Машина: <span th:text="${trip.carName}" th:class="'spanText'"></span></p>
+            <p>Время поездки: <span th:text="${trip.tripTime}" th:class="'spanText'"></span> минут</p>
+            <p>Стоимость поездки: <span th:text="${trip.tripCost}" th:class="'spanText'"></span> рублей</p>
+        </li>
+    </ul>
+</div>
+</body>
+</html>

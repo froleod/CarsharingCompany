@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Бронирование</title>
+
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+
+    <link rel="icon" href="/fav.png" type="image/png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
+
+</head>
+<body class="booking">
+<h1>Бронирование</h1>
+
+<div id="carInfo">
+    <h2 id="carName">Название машины</h2>
+    <p id="carPrice">Стоимость аренды</p>
+</div>
+<div id="timer">00:00</div>
+
+
+<form id="bookingForm" action="/processBooking" method="post">
+    <input type="hidden" id="carNameInput" name="carName" value="">
+    <input type="hidden" id="carPriceInput" name="carPrice" value="">
+    <input type="hidden" id="tripDurationInput" name="tripDuration" value="">
+    <button type="submit">Завершить аренду</button>
+</form>
+
+
+<script>
+    var urlParams = new URLSearchParams(window.location.search);
+    var carName = urlParams.get('carName');
+    var carPrice = urlParams.get('carPrice');
+    var tripDuration = document.getElementById('tripDurationInput');
+
+    // Заполняем скрытые поля формы
+    document.getElementById('carNameInput').value = carName;
+    document.getElementById('carPriceInput').value = carPrice;
+
+
+    // Отображаем данные о машине на странице
+    document.getElementById('carName').innerText = 'Название машины: ' + carName;
+    document.getElementById('carPrice').innerText = 'Стоимость аренды: ' + carPrice;
+
+
+    var startTime = new Date().getTime();
+
+    // Функция для обновления таймера
+    function updateTimer() {
+        var timerElement = document.getElementById('timer');
+        var currentTime = new Date().getTime();
+        var timeDiff = currentTime - startTime;
+        var minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
+
+        minutes = (minutes < 10) ? "0" + minutes : minutes;
+        seconds = (seconds < 10) ? "0" + seconds : seconds;
+
+        timerElement.innerHTML = minutes + ":" + seconds;
+        tripDuration.value = timerElement.innerText;
+    }
+
+    // Обновляем таймер каждую секунду
+    setInterval(updateTimer, 1000);
+
+</script>
+</body>
+</html>
