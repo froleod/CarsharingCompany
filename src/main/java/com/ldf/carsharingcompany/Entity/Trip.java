@@ -30,4 +30,8 @@ public class Trip {
         this.tripTime = tripTime;
         this.tripCost = tripCost;
     }
+
+    public Trip() {
+
+    }
 }

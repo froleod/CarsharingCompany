@@ -43,7 +43,19 @@
             carInfoElement.innerHTML = '<h2>' + carData.hintContent + '</h2>' +
                 '<p>' + carData.balloonContent + '</p>' +
                 '<form action="/booking?carName=' + carData.hintContent + '&carPrice=' + carData.balloonContent + '" method="post">\n' +
-                '    <button type="submit">Взять в аренду</button>\n' +
+                '    <button class="rent" type="submit" style="width: 200px;\n' +
+                '    height: 60px;\n' +
+                '    border: none;\n' +
+                '    outline: none;\n' +
+                '    background: #2f2f2f;\n' +
+                '    color: #fff;\n' +
+                '    font-size: 22px;\n' +
+                '    border-radius: 40px;\n' +
+                '    text-align: center;\n' +
+                '    box-shadow: 0 6px 20px -5px rgba(0,0,0,0.4);\n' +
+                '    position: relative;\n' +
+                '    overflow: hidden;\n' +
+                '    cursor: pointer;">Взять в аренду</button>\n' +
                 '</form>';
         }
 
@@ -54,9 +66,11 @@
             balloonContent: '20rub/min'
         },
             {
-                // iconLayout: 'default#image', // Использование изображения в качестве значка
-                // iconImageHref: '/static/polo.jpg', // Путь к вашему изображению машины
-                // iconImageSize: [100, 100]
+                iconLayout: 'default#imageWithContent',
+                iconImageHref: 'polo.jpg',
+                iconImageSize: [30, 30],
+                iconImageOffset: [-24, -24], // Смещение левого верхнего угла иконки относительно точки привязки
+                iconContentOffset: [15, 15] // Смещение слоя с содержимым относительно слоя с картинкой.
             });
 
         var car2 = new ymaps.Placemark([55.669460, 37.471205], {
@@ -64,7 +78,12 @@
                 balloonContent: '19rub/min'
             },
             {
-                preset: 'islands#taxiIcon'
+                iconLayout: 'default#imageWithContent',
+                iconImageHref: 'polo.jpg',
+                iconImageSize: [30, 30],
+                iconImageOffset: [-24, -24],
+                // Смещение слоя с содержимым относительно слоя с картинкой.
+                iconContentOffset: [15, 15]
             });
 
         var car3 = new ymaps.Placemark([55.669041, 37.463021], {
@@ -72,7 +91,12 @@
                 balloonContent: '25rub/min'
             },
             {
-                preset: 'islands#taxiIcon'
+                iconLayout: 'default#imageWithContent',
+                iconImageHref: 'polo.jpg',
+                iconImageSize: [30, 30],
+                iconImageOffset: [-24, -24],
+                // Смещение слоя с содержимым относительно слоя с картинкой.
+                iconContentOffset: [15, 15]
             });
 
 
@@ -88,9 +112,10 @@
             updateCarInfo(car3.properties.getAll());
         });
 
-        myMap.geoObjects.add(car1);
-        myMap.geoObjects.add(car2);
-        myMap.geoObjects.add(car3);
+        myMap.geoObjects
+            .add(car1)
+            .add(car2)
+            .add(car3);
     }
 </script>
 
