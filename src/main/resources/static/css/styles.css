@@ -1,16 +1,23 @@
 body{
-    background-color: cadetblue;
+    background-color: #373A36;
     font-family: "Unbounded", sans-serif;
+    color:#E6E2DD
 }
 
 .title{
     font-size: 60px;
     text-align: center;
-    color: #ec531b;
+    color: #d48166;
+}
+.hello{
+    text-align: center;
 }
 
 .spanText{
-    color: #be3e0f;
+    color: #d48166;
+}
+a{
+    color: #d48166;
 }
 
 ul {

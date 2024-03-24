@@ -6,7 +6,10 @@
 
     <script src="https://api-maps.yandex.ru/2.1/?apikey=e36bea28-eac7-4c8c-8cec-51adc2e8c681&lang=ru_RU" type="text/javascript"></script>
 
-    <link rel="stylesheet" th:href="@{/css/styles.css}">
+<!--    <link rel="stylesheet" th:href="@{/css/styles.css}">-->
+    <link rel="stylesheet" href="/css/styles.css">
+
+
 
     <link rel="icon" href="/fav.png" type="image/png">
 
@@ -16,6 +19,7 @@
 </head>
 <body>
 <h1 class="title" >Это каршеринг.<br>Welcome</h1>
+<h1 class="hello">Привет, <span th:text="${username}"></span>!</h1>
 <br>
 
 <a href="/trips">Мои поездки</a>
@@ -47,7 +51,7 @@
                 '    height: 60px;\n' +
                 '    border: none;\n' +
                 '    outline: none;\n' +
-                '    background: #2f2f2f;\n' +
+                '    background: #D48166;\n' +
                 '    color: #fff;\n' +
                 '    font-size: 22px;\n' +
                 '    border-radius: 40px;\n' +
@@ -67,8 +71,8 @@
         },
             {
                 iconLayout: 'default#imageWithContent',
-                iconImageHref: 'polo.jpg',
-                iconImageSize: [30, 30],
+                iconImageHref: 'polo.png',
+                iconImageSize: [34, 33],
                 iconImageOffset: [-24, -24], // Смещение левого верхнего угла иконки относительно точки привязки
                 iconContentOffset: [15, 15] // Смещение слоя с содержимым относительно слоя с картинкой.
             });
@@ -79,10 +83,9 @@
             },
             {
                 iconLayout: 'default#imageWithContent',
-                iconImageHref: 'polo.jpg',
-                iconImageSize: [30, 30],
+                iconImageHref: 'kia.png',
+                iconImageSize: [35, 32],
                 iconImageOffset: [-24, -24],
-                // Смещение слоя с содержимым относительно слоя с картинкой.
                 iconContentOffset: [15, 15]
             });
 
@@ -92,10 +95,33 @@
             },
             {
                 iconLayout: 'default#imageWithContent',
-                iconImageHref: 'polo.jpg',
-                iconImageSize: [30, 30],
+                iconImageHref: 'camry.png',
+                iconImageSize: [32, 32],
                 iconImageOffset: [-24, -24],
-                // Смещение слоя с содержимым относительно слоя с картинкой.
+                iconContentOffset: [15, 15]
+            });
+
+        var car4 = new ymaps.Placemark([55.669072, 37.454048], {
+                hintContent: 'VW Polo',
+                balloonContent: '18rub/min'
+            },
+            {
+                iconLayout: 'default#imageWithContent',
+                iconImageHref: 'polo.png',
+                iconImageSize: [34, 33],
+                iconImageOffset: [-24, -24],
+                iconContentOffset: [15, 15]
+            });
+
+        var car5 = new ymaps.Placemark([55.671842, 37.451505], {
+                hintContent: 'KIA Rio X',
+                balloonContent: '20rub/min'
+            },
+            {
+                iconLayout: 'default#imageWithContent',
+                iconImageHref: 'kia.png',
+                iconImageSize: [35, 32],
+                iconImageOffset: [-24, -24],
                 iconContentOffset: [15, 15]
             });
 
@@ -112,10 +138,20 @@
             updateCarInfo(car3.properties.getAll());
         });
 
+        car4.events.add('click', function (e) {
+            updateCarInfo(car4.properties.getAll());
+        });
+
+        car5.events.add('click', function (e) {
+            updateCarInfo(car5.properties.getAll());
+        });
+
         myMap.geoObjects
             .add(car1)
             .add(car2)
-            .add(car3);
+            .add(car3)
+            .add(car4)
+            .add(car5);
     }
 </script>
 

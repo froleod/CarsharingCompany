@@ -1,0 +1,26 @@
+version: '3.1'
+
+services:
+  app:
+    build: docker/
+    command: ./app
+    image: carsharing:latest
+    container_name: app
+    ports:
+      - '8080:8080'
+    environment:
+      - DB_USER=postgres
+      - DB_PASSWORD=aks
+      - DB_URL=jdbc:postgresql://db:5432/CarsharingCompany
+    depends_on:
+      - db
+  db:
+    image: 'postgres:latest'
+    restart: always
+    container_name: db
+    ports:
+      - '5432:5432'
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=aks
+      - POSTGRES_DB=CarsharingCompany

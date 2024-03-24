@@ -1,13 +1,13 @@
 package com.ldf.carsharingcompany.Entity;
 
 import jakarta.persistence.*;
+import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
 @Entity
 @Table(name="users")
-@Getter
-@Setter
+@Data
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -21,4 +21,6 @@ public class User {
 
     @Column(unique = true, nullable = false)
     private String email;
+
+    private String role;
 }

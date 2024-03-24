@@ -24,6 +24,8 @@ public class Trip {
     @Column(name = "trip_cost")
     private BigDecimal tripCost;
 
+
+
     public Trip(Long tripId, String carName, String tripTime, BigDecimal tripCost) {
         this.tripId = tripId;
         this.carName = carName;
