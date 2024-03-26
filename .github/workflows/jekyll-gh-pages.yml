@@ -35,6 +35,8 @@ jobs:
         with:
           source: src/main/resources/templates
           destination: ./_site
+      - name: Copy static files
+        run: cp -r src/main/resources/static/. _site/
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
 
