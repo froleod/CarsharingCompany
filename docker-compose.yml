@@ -1,26 +1,32 @@
 version: '3.1'
 
+volumes:
+  pg_carsharing:
+
 services:
-  app:
-    build: docker/
-    command: ./app
-    image: carsharing:latest
-    container_name: app
-    ports:
-      - '8080:8080'
-    environment:
-      - DB_USER=postgres
-      - DB_PASSWORD=aks
-      - DB_URL=jdbc:postgresql://db:5432/CarsharingCompany
-    depends_on:
-      - db
-  db:
-    image: 'postgres:latest'
+  pg_carsharing:
+    image: 'postgres'
     restart: always
-    container_name: db
+    container_name: pg_carsharing
     ports:
       - '5432:5432'
     environment:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=aks
       - POSTGRES_DB=CarsharingCompany
+    volumes:
+      - pg_carsharing:/var/lib/postgresql/data
+  app:
+    restart: always
+    build: .
+    ports:
+      - '8080:8080'
+    depends_on:
+      - pg_carsharing
+    container_name: app
+
+    environment:
+      - SPRING_DATASOURCE_URL='jdbc:postgresql://pg_carsharing:5432/CarsharingCompany'
+
+
+
