@@ -36,8 +36,10 @@ jobs:
           source: src/main/resources/templates
           destination: ./_site
       - name: Copy static files
-        run: cp -r $GITHUB_WORKSPACE/src/main/resources/static/. $GITHUB_WORKSPACE/_site/
-
+        uses: actions/upload-artifact@v2
+        with:
+          name: Static Files
+          path: src/main/resources/static
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
 
