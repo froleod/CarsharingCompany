@@ -3,6 +3,8 @@ package com.ldf.carsharingcompany.Controller;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -44,8 +46,12 @@ public class BookingController {
 
 //        System.out.println(carName + " " + tripDuration + " " + tripCostDecimal);
 
-        jdbcTemplate.update("INSERT INTO trip (car_name, trip_time, trip_cost) VALUES (?, ?, ?)",
-                carName, tripDuration, tripCostDecimal);
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        String username = authentication.getName();
+
+
+        jdbcTemplate.update("INSERT INTO trip (car_name, trip_time, trip_cost, username) VALUES (?, ?, ?, ?)",
+                carName, tripDuration, tripCostDecimal, username);
 
         return "redirect:/";
     }

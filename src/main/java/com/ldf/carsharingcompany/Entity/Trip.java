@@ -24,14 +24,25 @@ public class Trip {
     @Column(name = "trip_cost")
     private BigDecimal tripCost;
 
+    @Column(name = "username")
+    private String username;
 
+//    public Trip(String carName, String tripTime, BigDecimal tripCost, String username) {
+//        this.carName = carName;
+//        this.tripTime = tripTime;
+//        this.tripCost = tripCost;
+//        this.username = username;
+//    }
 
-    public Trip(Long tripId, String carName, String tripTime, BigDecimal tripCost) {
+    public Trip(Long tripId, String carName, String tripTime, BigDecimal tripCost, String username) {
         this.tripId = tripId;
         this.carName = carName;
         this.tripTime = tripTime;
         this.tripCost = tripCost;
+        this.username = username;
     }
+
+
 
     public Trip() {
 
