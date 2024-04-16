@@ -40,7 +40,8 @@ public class SecurityConfig {
                         .requestMatchers("/").authenticated()
                         .requestMatchers("/booking").authenticated()
                         .requestMatchers("/processBooking").authenticated()
-                        .requestMatchers("/trips").authenticated())
+                        .requestMatchers("/trips").authenticated()
+                        .requestMatchers("/profile").authenticated())
 
                 .formLogin(login -> login
                         .defaultSuccessUrl("/", true) // Редирект на /home после успешной аутентификации

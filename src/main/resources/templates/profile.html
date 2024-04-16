@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Личный кабинет</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
+    <style>
+        /* Ваши стили */
+        body{
+            background-color: #373A36;
+            font-family: "Unbounded", sans-serif;
+            color: #333;
+        }
+
+        .container {
+            width: 50%;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 50px;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        .info {
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .info p {
+            margin-bottom: 10px;
+        }
+
+        .logout-btn {
+            width: 100%;
+            margin-top: 20px;
+            display: block;
+            padding: 10px;
+            background-color: #ff6347;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .logout-btn:hover {
+            background-color: #ff4c36;
+        }
+
+        .home-btn {
+            display: block;
+            padding: 10px;
+            background-color: #6495ed;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            text-decoration: none;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .home-btn:hover {
+            background-color: #4169e1;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h2>Личный кабинет</h2>
+    <div class="info">
+        <p>Имя пользователя: <strong th:text="${username}"></strong></p>
+        <p>Количество поездок: <strong th:text="${tripCount}"></strong></p>
+    </div>
+    <a href="/" class="home-btn">На главную</a>
+    <form action="/logout" method="post">
+        <input type="submit" value="Выйти" class="logout-btn">
+    </form>
+
+</div>
+</body>
+</html>
