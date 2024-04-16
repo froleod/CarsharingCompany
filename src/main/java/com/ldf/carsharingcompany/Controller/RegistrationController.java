@@ -4,25 +4,27 @@ import com.ldf.carsharingcompany.Entity.User;
 import com.ldf.carsharingcompany.Service.AppService;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
-@RestController
+@Controller
 @AllArgsConstructor
 public class RegistrationController {
 
     private AppService appService;
 
-//    @GetMapping("/registration")
-//    public String registration(){
-//        return "registration";
-//    }
+    @GetMapping("/registration")
+    public String registration(){
+        return "registration";
+    }
 
-    @PostMapping("/new-user")
-    public String addUser(@RequestBody User user){
+    @PostMapping("/registration")
+    public String addUser(@ModelAttribute("username") String username,
+                          @ModelAttribute("password") String password) {
+        User user = new User();
+        user.setUsername(username);
+        user.setPassword(password);
+        user.setRoles("ROLE_USER"); // default role is "USER"
         appService.addUser(user);
-        return "User is saved!";
+        return "redirect:/login";
     }
 }

@@ -35,14 +35,16 @@ public class SecurityConfig {
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         return http.csrf(AbstractHttpConfigurer::disable)
-                .authorizeHttpRequests(auth -> auth.requestMatchers("/new-user", "/login", "/static/**").permitAll() // TODO: настроить видимость статических элементов
+                .authorizeHttpRequests(auth -> auth.requestMatchers("/registration", "/login", "/static/**").permitAll() // TODO: настроить видимость статических элементов
 //                        .requestMatchers("/static/**").permitAll()
                         .requestMatchers("/").authenticated()
                         .requestMatchers("/booking").authenticated()
                         .requestMatchers("/processBooking").authenticated()
                         .requestMatchers("/trips").authenticated())
 
-                .formLogin(AbstractAuthenticationFilterConfigurer::permitAll)
+                .formLogin(login -> login
+                        .defaultSuccessUrl("/", true) // Редирект на /home после успешной аутентификации
+                        .permitAll())
                 .build();
     }
 
