@@ -29,8 +29,6 @@ public class BookingController {
                                  @RequestParam("tripDuration") String tripDuration,
                                  HttpServletRequest request) {
 
-//        System.out.println(carName + " " + tripDuration + " " + carPrice);
-
         String[] durationParts = tripDuration.split(":");
 
         Double minutes = Double.parseDouble(durationParts[0]) + Double.parseDouble(durationParts[1]) / 60;
@@ -39,19 +37,19 @@ public class BookingController {
         int carPriceInt = Integer.parseInt(priceSubstring);
 
         BigDecimal carPriceDecimal = new BigDecimal(carPriceInt);
-
-//        System.out.println(minutes);
-
         BigDecimal tripCostDecimal = carPriceDecimal.multiply(BigDecimal.valueOf(minutes));
-
-//        System.out.println(carName + " " + tripDuration + " " + tripCostDecimal);
-
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         String username = authentication.getName();
 
 
-        jdbcTemplate.update("INSERT INTO trip (car_name, trip_time, trip_cost, username) VALUES (?, ?, ?, ?)",
-                carName, tripDuration, tripCostDecimal, username);
+        Long userId = jdbcTemplate.queryForObject(
+                "SELECT id FROM users WHERE username = ?",
+                new Object[]{username},
+                Long.class
+        );
+
+        jdbcTemplate.update("INSERT INTO trip (car_name, trip_time, trip_cost, user_id) VALUES (?, ?, ?, ?)",
+                carName, tripDuration, tripCostDecimal, userId);
 
         return "redirect:/";
     }
