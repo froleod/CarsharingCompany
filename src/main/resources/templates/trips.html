@@ -3,68 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>Мои поездки</title>
-    <link rel="stylesheet" th:href="@{/styles.css}">
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
 
-    <link rel="icon" href="/fav.png" type="image/png">
+    <link rel="icon" href="/images/fav.png" type="image/png">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
 </head>
-<!--a forced measure due to an error-->
-<!--Refused to apply style from 'http://localhost:8080/styles.css' because its MIME type ('') is not a supported stylesheet MIME type, and strict MIME checking is enabled.-->
-<!--Refused to apply style from 'http://localhost:8080/styles.css' because its MIME type ('') is not a supported stylesheet MIME type, and strict MIME checking is enabled.-->
-<!--GET http://localhost:8080/camry.png 403 (Forbidden)-->
-<style>
-    body{
-        background-color: #373A36;
-        font-family: "Unbounded", sans-serif;
-        color:#E6E2DD
-    }
-
-    .title{
-        font-size: 60px;
-        text-align: center;
-        color: #d48166;
-    }
-    .hello{
-        text-align: center;
-    }
-
-    .spanText{
-        color: #d48166;
-    }
-    a{
-        color: #d48166;
-    }
-
-    ul {
-        list-style-type: none;
-    }
-
-    .tripList{
-        text-align: center;
-    }
-
-    #map {
-        width: 100%;
-        height: 500px;
-        text-align: center;
-    }
-
-    .bookingBody{
-        text-align: center;
-    }
-
-    .wrapper{
-        display: grid;
-        grid-template-columns: 2fr 1fr;
-    }
-
-    .card{
-        text-align: center;
-    }
-</style>
 <body>
 <div class="tripList">
     <h1>Ваши поездки</h1>

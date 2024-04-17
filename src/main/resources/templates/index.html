@@ -7,71 +7,17 @@
     <script src="https://api-maps.yandex.ru/2.1/?apikey=e36bea28-eac7-4c8c-8cec-51adc2e8c681&lang=ru_RU" type="text/javascript"></script>
 
 <!--    <link rel="stylesheet" th:href="@{/styles.css}">-->
-    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/css/styles.css">
 <!--    <link rel="stylesheet" href="/css/styles.css">-->
 
 
 
-    <link rel="icon" href="/fav.png" type="image/png">
+    <link rel="icon" href="/images/fav.png" type="image/png">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
 </head>
-<!--a forced measure due to an error-->
-<!--Refused to apply style from 'http://localhost:8080/styles.css' because its MIME type ('') is not a supported stylesheet MIME type, and strict MIME checking is enabled.-->
-<!--Refused to apply style from 'http://localhost:8080/styles.css' because its MIME type ('') is not a supported stylesheet MIME type, and strict MIME checking is enabled.-->
-<!--GET http://localhost:8080/camry.png 403 (Forbidden)-->
-<style>
-    body{
-        background-color: #373A36;
-        font-family: "Unbounded", sans-serif;
-        color:#E6E2DD
-    }
-
-    .title{
-        font-size: 60px;
-        text-align: center;
-        color: #d48166;
-    }
-    .hello{
-        text-align: center;
-    }
-
-    .spanText{
-        color: #d48166;
-    }
-    a{
-        color: #d48166;
-    }
-
-    ul {
-        list-style-type: none;
-    }
-
-    .tripList{
-        text-align: center;
-    }
-
-    #map {
-        width: 100%;
-        height: 500px;
-        text-align: center;
-    }
-
-    .bookingBody{
-        text-align: center;
-    }
-
-    .wrapper{
-        display: grid;
-        grid-template-columns: 2fr 1fr;
-    }
-
-    .card{
-        text-align: center;
-    }
-</style>
 <body>
 <div style="text-align: right; padding: 10px;">
     <a href="/profile">Личный кабинет</a>
@@ -127,11 +73,11 @@
             balloonContent: '20rub/min'
         },
             {
-                // iconLayout: 'default#imageWithContent',
-                // iconImageHref: 'https://w7.pngwing.com/pngs/74/513/png-transparent-volkswagen-polo-car-renault-symbol-price-volkswagen-compact-car-sedan-car.png',
-                // iconImageSize: [34, 33],
-                // iconImageOffset: [-24, -24], // Смещение левого верхнего угла иконки относительно точки привязки
-                // iconContentOffset: [15, 15] // Смещение слоя с содержимым относительно слоя с картинкой.
+                iconLayout: 'default#imageWithContent',
+                iconImageHref: 'images/polo.png',
+                iconImageSize: [34, 33],
+                iconImageOffset: [-24, -24], // Смещение левого верхнего угла иконки относительно точки привязки
+                iconContentOffset: [15, 15] // Смещение слоя с содержимым относительно слоя с картинкой.
             });
 
         var car2 = new ymaps.Placemark([55.669460, 37.471205], {
@@ -139,11 +85,11 @@
                 balloonContent: '19rub/min'
             },
             {
-                // iconLayout: 'default#imageWithContent',
-                // iconImageHref: 'kia.png',
-                // iconImageSize: [35, 32],
-                // iconImageOffset: [-24, -24],
-                // iconContentOffset: [15, 15]
+                iconLayout: 'default#imageWithContent',
+                iconImageHref: 'images/kia.png',
+                iconImageSize: [35, 32],
+                iconImageOffset: [-24, -24],
+                iconContentOffset: [15, 15]
             });
 
         var car3 = new ymaps.Placemark([55.669041, 37.463021], {
@@ -151,11 +97,11 @@
                 balloonContent: '25rub/min'
             },
             {
-                // iconLayout: 'default#imageWithContent',
-                // iconImageHref: 'camry.png',
-                // iconImageSize: [32, 32],
-                // iconImageOffset: [-24, -24],
-                // iconContentOffset: [15, 15]
+                iconLayout: 'default#imageWithContent',
+                iconImageHref: 'images/camry.png',
+                iconImageSize: [32, 32],
+                iconImageOffset: [-24, -24],
+                iconContentOffset: [15, 15]
             });
 
         var car4 = new ymaps.Placemark([55.669072, 37.454048], {
@@ -163,11 +109,11 @@
                 balloonContent: '18rub/min'
             },
             {
-                // iconLayout: 'default#imageWithContent',
-                // iconImageHref: 'polo.png',
-                // iconImageSize: [34, 33],
-                // iconImageOffset: [-24, -24],
-                // iconContentOffset: [15, 15]
+                iconLayout: 'default#imageWithContent',
+                iconImageHref: 'images/polo.png',
+                iconImageSize: [34, 33],
+                iconImageOffset: [-24, -24],
+                iconContentOffset: [15, 15]
             });
 
         var car5 = new ymaps.Placemark([55.671842, 37.451505], {
@@ -175,11 +121,11 @@
                 balloonContent: '20rub/min'
             },
             {
-                // iconLayout: 'default#imageWithContent',
-                // iconImageHref: 'kia.png',
-                // iconImageSize: [35, 32],
-                // iconImageOffset: [-24, -24],
-                // iconContentOffset: [15, 15]
+                iconLayout: 'default#imageWithContent',
+                iconImageHref: 'images/kia.png',
+                iconImageSize: [35, 32],
+                iconImageOffset: [-24, -24],
+                iconContentOffset: [15, 15]
             });
 
 

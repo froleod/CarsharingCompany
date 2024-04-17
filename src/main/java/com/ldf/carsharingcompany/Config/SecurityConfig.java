@@ -35,8 +35,8 @@ public class SecurityConfig {
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         return http.csrf(AbstractHttpConfigurer::disable)
-                .authorizeHttpRequests(auth -> auth.requestMatchers("/registration", "/login", "/static/**").permitAll() // TODO: настроить видимость статических элементов
-//                        .requestMatchers("/static/**").permitAll()
+                .authorizeHttpRequests(auth -> auth.requestMatchers("/registration", "/login").permitAll() // TODO: настроить видимость статических элементов
+                        .requestMatchers("/static/**", "/css/**", "/images/**").permitAll()
                         .requestMatchers("/").authenticated()
                         .requestMatchers("/booking").authenticated()
                         .requestMatchers("/processBooking").authenticated()
