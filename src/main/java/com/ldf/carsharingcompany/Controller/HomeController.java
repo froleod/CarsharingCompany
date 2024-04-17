@@ -10,16 +10,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class HomeController {
-
-//    @GetMapping("/")
-//    public String index() {
-//        return "index";
-//    }
-
     @GetMapping("/")
     public String home(Model model) {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-        String username = authentication.getName(); // Получаем имя аутентифицированного пользователя
+        String username = authentication.getName();
         model.addAttribute("username", username);
         return "index";
     }

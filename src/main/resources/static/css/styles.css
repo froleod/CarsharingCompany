@@ -1,7 +1,7 @@
 body{
     background-color: #373A36;
     font-family: "Unbounded", sans-serif;
-    color:#E6E2DD
+    color:#E6E2DD;
 }
 
 .title{
@@ -11,6 +11,9 @@ body{
 }
 .hello{
     text-align: center;
+}
+#carInfo h2 {
+    color:#E6E2DD;
 }
 
 .spanText, a, .card h2{

@@ -19,26 +19,10 @@ public class MyUserDetailService implements UserDetailsService {
     @Autowired
     private UserRepository userRepository;
 
-    @Autowired
-    private PasswordEncoder passwordEncoder;
-
-//    @Override
-//    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-//        Optional<User> user = userRepository.findByUsername(username);
-//        return user.map(MyUserDetails::new)
-//                .orElseThrow(() -> new UsernameNotFoundException(username + " not found"));
-//
-//    }
-
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         Optional<User> userOptional = userRepository.findByUsername(username);
         User user = userOptional.orElseThrow(() -> new UsernameNotFoundException(username + " not found"));
         return new MyUserDetails(user);
     }
-
-//    public void registerUser(User user) {
-//        user.setPassword(passwordEncoder.encode(user.getPassword()));
-//        userRepository.save(user);
-//    }
 }
