@@ -1,97 +1,68 @@
-668  [main] INFO  c.l.c.CarsharingCompanyApplication – Starting CarsharingCompanyApplication using Java 18.0.2 with PID 18172 (C:\Users\main\IdeaProjects\CarsharingCompany\target\classes started by main in C:\Users\main\IdeaProjects\CarsharingCompany)
-669  [main] INFO  c.l.c.CarsharingCompanyApplication – No active profile set, falling back to 1 default profile: "default"
-1274 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-1319 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Finished Spring Data repository scanning in 38 ms. Found 1 JPA repository interface.
-1917 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer – Tomcat initialized with port 8080 (http)
-1928 [main] INFO  o.a.coyote.http11.Http11NioProtocol – Initializing ProtocolHandler ["http-nio-8080"]
-1930 [main] INFO  o.a.catalina.core.StandardService – Starting service [Tomcat]
-1930 [main] INFO  o.a.catalina.core.StandardEngine – Starting Servlet engine: [Apache Tomcat/10.1.19]
-1981 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] – Initializing Spring embedded WebApplicationContext
-1981 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext – Root WebApplicationContext: initialization completed in 1275 ms
-2141 [main] INFO  o.h.jpa.internal.util.LogHelper – HHH000204: Processing PersistenceUnitInfo [name: default]
-2230 [main] INFO  org.hibernate.Version – HHH000412: Hibernate ORM core version 6.4.4.Final
-2273 [main] INFO  o.h.c.i.RegionFactoryInitiator – HHH000026: Second-level cache disabled
-2536 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo – No LoadTimeWeaver setup: ignoring JPA class transformer
-2562 [main] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Starting...
-2768 [main] INFO  com.zaxxer.hikari.pool.HikariPool – HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@12214f2f
-2769 [main] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Start completed.
-2832 [main] WARN  org.hibernate.orm.deprecation – HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-3630 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator – HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-3726 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean – Initialized JPA EntityManagerFactory for persistence unit 'default'
-4072 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration – spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-4181 [main] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping – Adding welcome page template: index
-4359 [main] INFO  o.s.s.w.DefaultSecurityFilterChain – Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@2db82155, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@128d397c, org.springframework.security.web.context.SecurityContextHolderFilter@5aec151b, org.springframework.security.web.header.HeaderWriterFilter@4e3c0627, org.springframework.web.filter.CorsFilter@294ab038, org.springframework.security.web.authentication.logout.LogoutFilter@1196537d, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@c76762, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@11a0c708, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@395abe85, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@14b9817b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3052395d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@55849272, org.springframework.security.web.access.ExceptionTranslationFilter@5d200dce, org.springframework.security.web.access.intercept.AuthorizationFilter@2df24f19]
-4607 [main] INFO  o.a.coyote.http11.Http11NioProtocol – Starting ProtocolHandler ["http-nio-8080"]
-4626 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer – Tomcat started on port 8080 (http) with context path ''
-4636 [main] INFO  c.l.c.CarsharingCompanyApplication – Started CarsharingCompanyApplication in 4.273 seconds (process running for 5.209)
-7783 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] – Initializing Spring DispatcherServlet 'dispatcherServlet'
-7783 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet – Initializing Servlet 'dispatcherServlet'
-7785 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet – Completed initialization in 1 ms
-153442 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean – Closing JPA EntityManagerFactory for persistence unit 'default'
-153444 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Shutdown initiated...
-153448 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Shutdown completed.
-596  [main] INFO  c.l.c.CarsharingCompanyApplication – Starting CarsharingCompanyApplication using Java 18.0.2 with PID 3368 (C:\Users\main\IdeaProjects\CarsharingCompany\target\classes started by main in C:\Users\main\IdeaProjects\CarsharingCompany)
-598  [main] INFO  c.l.c.CarsharingCompanyApplication – No active profile set, falling back to 1 default profile: "default"
-1143 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-1182 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Finished Spring Data repository scanning in 33 ms. Found 1 JPA repository interface.
-1654 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer – Tomcat initialized with port 8080 (http)
-1664 [main] INFO  o.a.coyote.http11.Http11NioProtocol – Initializing ProtocolHandler ["http-nio-8080"]
-1665 [main] INFO  o.a.catalina.core.StandardService – Starting service [Tomcat]
-1666 [main] INFO  o.a.catalina.core.StandardEngine – Starting Servlet engine: [Apache Tomcat/10.1.19]
-1713 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] – Initializing Spring embedded WebApplicationContext
-1713 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext – Root WebApplicationContext: initialization completed in 1082 ms
-1865 [main] INFO  o.h.jpa.internal.util.LogHelper – HHH000204: Processing PersistenceUnitInfo [name: default]
-1933 [main] INFO  org.hibernate.Version – HHH000412: Hibernate ORM core version 6.4.4.Final
-1969 [main] INFO  o.h.c.i.RegionFactoryInitiator – HHH000026: Second-level cache disabled
-2187 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo – No LoadTimeWeaver setup: ignoring JPA class transformer
-2210 [main] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Starting...
-2357 [main] INFO  com.zaxxer.hikari.pool.HikariPool – HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@2513155a
-2358 [main] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Start completed.
-2403 [main] WARN  org.hibernate.orm.deprecation – HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-3188 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator – HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-3270 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean – Initialized JPA EntityManagerFactory for persistence unit 'default'
-3540 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration – spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-3622 [main] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping – Adding welcome page template: index
-3788 [main] INFO  o.s.s.w.DefaultSecurityFilterChain – Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@54e3cba2, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4f1aa2bc, org.springframework.security.web.context.SecurityContextHolderFilter@5bfeb9ba, org.springframework.security.web.header.HeaderWriterFilter@11a0c708, org.springframework.web.filter.CorsFilter@13e5c53c, org.springframework.security.web.authentication.logout.LogoutFilter@5af7e2f, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@294ebdae, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@5dc8448b, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@5d03df76, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@26619e5, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@445f6aa7, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@17f7a1af, org.springframework.security.web.access.ExceptionTranslationFilter@5fee3c9c, org.springframework.security.web.access.intercept.AuthorizationFilter@4f2a9903]
-4005 [main] INFO  o.a.coyote.http11.Http11NioProtocol – Starting ProtocolHandler ["http-nio-8080"]
-4022 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer – Tomcat started on port 8080 (http) with context path ''
-4031 [main] INFO  c.l.c.CarsharingCompanyApplication – Started CarsharingCompanyApplication in 3.701 seconds (process running for 4.523)
-7047 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] – Initializing Spring DispatcherServlet 'dispatcherServlet'
-7047 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet – Initializing Servlet 'dispatcherServlet'
-7048 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet – Completed initialization in 1 ms
-30438 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean – Closing JPA EntityManagerFactory for persistence unit 'default'
-30440 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Shutdown initiated...
-30443 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Shutdown completed.
-498  [main] INFO  c.l.c.CarsharingCompanyApplication – Starting CarsharingCompanyApplication using Java 18.0.2 with PID 19584 (C:\Users\main\IdeaProjects\CarsharingCompany\target\classes started by main in C:\Users\main\IdeaProjects\CarsharingCompany)
-500  [main] INFO  c.l.c.CarsharingCompanyApplication – No active profile set, falling back to 1 default profile: "default"
-994  [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-1032 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Finished Spring Data repository scanning in 33 ms. Found 1 JPA repository interface.
-1470 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer – Tomcat initialized with port 8080 (http)
-1479 [main] INFO  o.a.coyote.http11.Http11NioProtocol – Initializing ProtocolHandler ["http-nio-8080"]
-1480 [main] INFO  o.a.catalina.core.StandardService – Starting service [Tomcat]
-1480 [main] INFO  o.a.catalina.core.StandardEngine – Starting Servlet engine: [Apache Tomcat/10.1.19]
-1520 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] – Initializing Spring embedded WebApplicationContext
-1520 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext – Root WebApplicationContext: initialization completed in 991 ms
-1652 [main] INFO  o.h.jpa.internal.util.LogHelper – HHH000204: Processing PersistenceUnitInfo [name: default]
-1691 [main] INFO  org.hibernate.Version – HHH000412: Hibernate ORM core version 6.4.4.Final
-1717 [main] INFO  o.h.c.i.RegionFactoryInitiator – HHH000026: Second-level cache disabled
-1884 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo – No LoadTimeWeaver setup: ignoring JPA class transformer
-1909 [main] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Starting...
-2035 [main] INFO  com.zaxxer.hikari.pool.HikariPool – HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@6cd2cb2
-2037 [main] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Start completed.
-2067 [main] WARN  org.hibernate.orm.deprecation – HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2743 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator – HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2808 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean – Initialized JPA EntityManagerFactory for persistence unit 'default'
-3076 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration – spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-3170 [main] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping – Adding welcome page template: index
-3358 [main] INFO  o.s.s.w.DefaultSecurityFilterChain – Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@45bbb3e8, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@795e8ef5, org.springframework.security.web.context.SecurityContextHolderFilter@60317de8, org.springframework.security.web.header.HeaderWriterFilter@15af06f, org.springframework.web.filter.CorsFilter@13976c57, org.springframework.security.web.authentication.logout.LogoutFilter@26361572, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@411576c7, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@ae5d544, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@10b7b5f0, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7b55fc83, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3615f8d9, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@80b70fd, org.springframework.security.web.access.ExceptionTranslationFilter@18f794e, org.springframework.security.web.access.intercept.AuthorizationFilter@623bdc46]
-3612 [main] INFO  o.a.coyote.http11.Http11NioProtocol – Starting ProtocolHandler ["http-nio-8080"]
-3634 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer – Tomcat started on port 8080 (http) with context path ''
-3642 [main] INFO  c.l.c.CarsharingCompanyApplication – Started CarsharingCompanyApplication in 3.397 seconds (process running for 4.006)
-5710 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] – Initializing Spring DispatcherServlet 'dispatcherServlet'
-5710 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet – Initializing Servlet 'dispatcherServlet'
-5712 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet – Completed initialization in 1 ms
-11997 [http-nio-8080-exec-6] INFO  c.l.c.Service.TripService – User ldf has 2 trips
-24511 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean – Closing JPA EntityManagerFactory for persistence unit 'default'
-24512 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Shutdown initiated...
-24518 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Shutdown completed.
+766  [main] INFO  c.l.c.CarsharingCompanyApplication – Starting CarsharingCompanyApplication using Java 18.0.2 with PID 17600 (C:\Users\main\IdeaProjects\CarsharingCompany\target\classes started by main in C:\Users\main\IdeaProjects\CarsharingCompany)
+777  [main] INFO  c.l.c.CarsharingCompanyApplication – No active profile set, falling back to 1 default profile: "default"
+1712 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+1770 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Finished Spring Data repository scanning in 47 ms. Found 1 JPA repository interface.
+2390 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer – Tomcat initialized with port 8080 (http)
+2403 [main] INFO  o.a.coyote.http11.Http11NioProtocol – Initializing ProtocolHandler ["http-nio-8080"]
+2406 [main] INFO  o.a.catalina.core.StandardService – Starting service [Tomcat]
+2406 [main] INFO  o.a.catalina.core.StandardEngine – Starting Servlet engine: [Apache Tomcat/10.1.19]
+2469 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] – Initializing Spring embedded WebApplicationContext
+2469 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext – Root WebApplicationContext: initialization completed in 1625 ms
+2643 [main] INFO  o.h.jpa.internal.util.LogHelper – HHH000204: Processing PersistenceUnitInfo [name: default]
+2711 [main] INFO  org.hibernate.Version – HHH000412: Hibernate ORM core version 6.4.4.Final
+2754 [main] INFO  o.h.c.i.RegionFactoryInitiator – HHH000026: Second-level cache disabled
+3025 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo – No LoadTimeWeaver setup: ignoring JPA class transformer
+3053 [main] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Starting...
+3318 [main] INFO  com.zaxxer.hikari.pool.HikariPool – HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@995ad50
+3320 [main] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Start completed.
+3445 [main] WARN  org.hibernate.orm.deprecation – HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+4285 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator – HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+4524 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean – Initialized JPA EntityManagerFactory for persistence unit 'default'
+4856 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration – spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+4981 [main] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping – Adding welcome page template: index
+5167 [main] INFO  o.s.s.w.DefaultSecurityFilterChain – Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5aec151b, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@74cf2d5f, org.springframework.security.web.context.SecurityContextHolderFilter@3ef04239, org.springframework.security.web.header.HeaderWriterFilter@4bba2704, org.springframework.web.filter.CorsFilter@14b9817b, org.springframework.security.web.authentication.logout.LogoutFilter@141c66db, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@57f6fc09, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@40da1644, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@3052395d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@49994a4, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1a82453, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@a2ca681, org.springframework.security.web.access.ExceptionTranslationFilter@344acc03, org.springframework.security.web.access.intercept.AuthorizationFilter@4e3c0627]
+5440 [main] INFO  o.a.coyote.http11.Http11NioProtocol – Starting ProtocolHandler ["http-nio-8080"]
+5463 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer – Tomcat started on port 8080 (http) with context path ''
+5471 [main] INFO  c.l.c.CarsharingCompanyApplication – Started CarsharingCompanyApplication in 5.047 seconds (process running for 6.237)
+24373 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] – Initializing Spring DispatcherServlet 'dispatcherServlet'
+24373 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet – Initializing Servlet 'dispatcherServlet'
+24374 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet – Completed initialization in 1 ms
+210275 [http-nio-8080-exec-1] INFO  c.l.c.Service.TripService – User ldf has 3 trips
+1012423 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean – Closing JPA EntityManagerFactory for persistence unit 'default'
+1012532 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Shutdown initiated...
+1012594 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Shutdown completed.
+655  [main] INFO  c.l.c.CarsharingCompanyApplication – Starting CarsharingCompanyApplication using Java 18.0.2 with PID 9920 (C:\Users\main\IdeaProjects\CarsharingCompany\target\classes started by main in C:\Users\main\IdeaProjects\CarsharingCompany)
+656  [main] INFO  c.l.c.CarsharingCompanyApplication – No active profile set, falling back to 1 default profile: "default"
+1281 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+1330 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Finished Spring Data repository scanning in 41 ms. Found 1 JPA repository interface.
+1871 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer – Tomcat initialized with port 8080 (http)
+1881 [main] INFO  o.a.coyote.http11.Http11NioProtocol – Initializing ProtocolHandler ["http-nio-8080"]
+1883 [main] INFO  o.a.catalina.core.StandardService – Starting service [Tomcat]
+1883 [main] INFO  o.a.catalina.core.StandardEngine – Starting Servlet engine: [Apache Tomcat/10.1.19]
+1936 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] – Initializing Spring embedded WebApplicationContext
+1936 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext – Root WebApplicationContext: initialization completed in 1242 ms
+2092 [main] INFO  o.h.jpa.internal.util.LogHelper – HHH000204: Processing PersistenceUnitInfo [name: default]
+2165 [main] INFO  org.hibernate.Version – HHH000412: Hibernate ORM core version 6.4.4.Final
+2198 [main] INFO  o.h.c.i.RegionFactoryInitiator – HHH000026: Second-level cache disabled
+2438 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo – No LoadTimeWeaver setup: ignoring JPA class transformer
+2466 [main] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Starting...
+2632 [main] INFO  com.zaxxer.hikari.pool.HikariPool – HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@7657d90b
+2633 [main] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Start completed.
+2687 [main] WARN  org.hibernate.orm.deprecation – HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+3522 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator – HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+3613 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean – Initialized JPA EntityManagerFactory for persistence unit 'default'
+3935 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration – spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+4031 [main] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping – Adding welcome page template: index
+4201 [main] INFO  o.s.s.w.DefaultSecurityFilterChain – Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@30bfdcc5, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1e9b0c92, org.springframework.security.web.context.SecurityContextHolderFilter@5980e29f, org.springframework.security.web.header.HeaderWriterFilter@178c4480, org.springframework.web.filter.CorsFilter@5bfeb9ba, org.springframework.security.web.authentication.logout.LogoutFilter@3615f8d9, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@7e577eed, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@5eed2edf, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@4cf1bd4a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@487bc2fe, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@58038583, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@26619e5, org.springframework.security.web.access.ExceptionTranslationFilter@3df54fd5, org.springframework.security.web.access.intercept.AuthorizationFilter@5fee3c9c]
+4458 [main] INFO  o.a.coyote.http11.Http11NioProtocol – Starting ProtocolHandler ["http-nio-8080"]
+4475 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer – Tomcat started on port 8080 (http) with context path ''
+4483 [main] INFO  c.l.c.CarsharingCompanyApplication – Started CarsharingCompanyApplication in 4.164 seconds (process running for 5.027)
+7814 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] – Initializing Spring DispatcherServlet 'dispatcherServlet'
+7815 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet – Initializing Servlet 'dispatcherServlet'
+7816 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet – Completed initialization in 1 ms
+166904 [http-nio-8080-exec-1] INFO  c.l.c.Service.AppService – User User(id=8, username=test, password=$2a$10$EpvxYJTf7Y3MRtbVZjG1we/aNrcnJCNPz709Otu0xsr5cHa9xkj12, roles=ROLE_USER) is saved!
+1246725 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool – HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=6m13s753ms142µs600ns).
+1676172 [http-nio-8080-exec-9] INFO  c.l.c.Service.TripService – User test has 2 trips
+2337617 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean – Closing JPA EntityManagerFactory for persistence unit 'default'
+2337676 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Shutdown initiated...
+2337712 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Shutdown completed.

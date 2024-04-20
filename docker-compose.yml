@@ -1,32 +1,24 @@
 version: '3.1'
 
-volumes:
-  pg_carsharing:
-
 services:
   pg_carsharing:
-    image: 'postgres'
+    image: postgres
     restart: always
-    container_name: pg_carsharing
     ports:
-      - '5432:5432'
+      - "5432:5432"
     environment:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=aks
       - POSTGRES_DB=CarsharingCompany
-    volumes:
-      - pg_carsharing:/var/lib/postgresql/data
   app:
     restart: always
     build: .
     ports:
-      - '8080:8080'
+      - "8080:8080"
     depends_on:
       - pg_carsharing
     container_name: app
-
     environment:
-      - SPRING_DATASOURCE_URL='jdbc:postgresql://pg_carsharing:5432/CarsharingCompany'
-
-
-
+      SPRING_DATASOURCE_URL: jdbc:postgresql://pg_carsharing:5432/CarsharingCompany
+      SPRING_DATASOURCE_PASSWORD: aks
+      SPRING_DATASOURCE_USERNAME: postgres

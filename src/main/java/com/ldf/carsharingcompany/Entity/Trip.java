@@ -24,19 +24,9 @@ public class Trip {
     @Column(name = "trip_cost")
     private BigDecimal tripCost;
 
-//    @Column(name = "username")
-//    private String username;
-
     @ManyToOne
     @JoinColumn(name = "user_id", nullable = false)
     private User user;
-
-//    public Trip(String carName, String tripTime, BigDecimal tripCost, String username) {
-//        this.carName = carName;
-//        this.tripTime = tripTime;
-//        this.tripCost = tripCost;
-//        this.username = username;
-//    }
 
 
     public Trip(Long tripId, String carName, String tripTime, BigDecimal tripCost, User user) {
