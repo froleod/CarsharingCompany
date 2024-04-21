@@ -1,6 +1,6 @@
 <h1>CarSharing Company</h1>
 <h2>Description</h2>
-<p>This project is a web application for a car rental company. It provides users with the ability to register, log in, book cars, view their trips and manage their profile.
+<p>This project is a web application for a car rental company, using Java, Spring, PostgreSQL. It provides users with the ability to register, log in, book cars, view their trips and manage their profile.
 
 To access the web application on the hosting, go to the following address: https://carsharing-app-deploy-latest.onrender.com
 
