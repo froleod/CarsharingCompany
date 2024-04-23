@@ -40,4 +40,11 @@ public class Trip {
     public Trip() {
 
     }
+
+    public Trip(String carName, String tripDuration, BigDecimal tripCostDecimal, User user) {
+        this.carName = carName;
+        this.tripTime = tripDuration;
+        this.tripCost = tripCostDecimal;
+        this.user = user;
+    }
 }

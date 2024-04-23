@@ -1,5 +1,8 @@
 package com.ldf.carsharingcompany.Service;
 
+import com.ldf.carsharingcompany.Entity.Trip;
+import com.ldf.carsharingcompany.Repo.TripRepository;
+import com.ldf.carsharingcompany.Repo.UserRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -7,26 +10,52 @@ import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
 import jakarta.persistence.Query;
 
+import java.util.List;
+
 @Service
 @Slf4j
 public class TripService {
+    @Autowired
+    private TripRepository tripRepository;
 
-    @PersistenceContext
-    private EntityManager entityManager;
+    @Autowired
+    private UserRepository userRepository;
 
     public int getTripCountForUser(String username) {
-        // Создаем SQL запрос для получения количества поездок для пользователя
-        String sqlQuery = "SELECT COUNT(*) FROM trip WHERE user_id = (SELECT id FROM users WHERE username = ?)";
+        Long userId = userRepository.findByUsername(username).getId();
+        if (userId == null) {
+            log.error("Пользователь с именем {} не найден", username);
+            return 0;
+        }
 
-        // Создаем запрос с помощью EntityManager
-        Query query = entityManager.createNativeQuery(sqlQuery);
-        query.setParameter(1, username);
+        List<Trip> trips = tripRepository.findByUserId(userId);
+        int tripCount = trips.size();
 
-        // Выполняем запрос и получаем результат
-        Number result = (Number) query.getSingleResult();
+        log.info("Пользователь {} имеет {} поездок", username, tripCount);
+        return tripCount;
+    }
 
-        // Возвращаем количество поездок
-        log.info("User " + username + " has " + result.intValue() + " trips");
-        return result.intValue();
+    public String getFormattedTripTimeForUser(String username) {
+        Long userId = userRepository.findByUsername(username).getId();
+        if (userId == null) {
+            log.error("Пользователь с именем {} не найден", username);
+            return "Нет данных о времени поездок";
+        }
+
+        List<Trip> trips = tripRepository.findByUserId(userId);
+        int totalSeconds = 0;
+        for (Trip trip : trips) {
+            String[] timeParts = trip.getTripTime().split(":");
+            int minutes = Integer.parseInt(timeParts[0]);
+            int seconds = Integer.parseInt(timeParts[1]);
+            totalSeconds += minutes * 60 + seconds;
+        }
+
+        int minutes = totalSeconds / 60;
+        int seconds = totalSeconds % 60;
+        String formattedTime = String.format("%d минут %d секунд", minutes, seconds);
+
+        log.info("Время поездок для пользователя {}: {}", username, formattedTime);
+        return formattedTime;
     }
 }

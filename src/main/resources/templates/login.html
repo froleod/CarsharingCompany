@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Регистрация</title>
+    <title>Авторизация</title>
     <link rel="stylesheet" href="/css/styles.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,16 +11,16 @@
 </head>
 <body>
 <div class="container">
-    <h2>Регистрация</h2>
-    <form action="/registration" method="post">
+    <h2>Авторизация</h2>
+    <form action="/login" method="post">
         <label for="username">Имя пользователя:</label>
         <input type="text" id="username" name="username">
         <label for="password">Пароль:</label>
         <input type="password" id="password" name="password">
-        <input type="submit" value="Зарегистрироваться">
+        <input type="submit" value="Авторизоваться">
     </form>
     <br>
-    <a href="login">Уже есть аккаунт</a>
+    <a href="registration">Зарегистрироваться</a>
 </div>
 </body>
 </html>

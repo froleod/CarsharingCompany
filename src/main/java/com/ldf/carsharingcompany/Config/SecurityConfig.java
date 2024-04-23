@@ -36,6 +36,7 @@ public class SecurityConfig {
                         .requestMatchers("/profile").authenticated())
 
                 .formLogin(login -> login
+                        .loginPage("/login")
                         .defaultSuccessUrl("/", true) // Редирект на /home после успешной аутентификации
                         .permitAll())
                 .build();

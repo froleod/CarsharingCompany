@@ -26,9 +26,11 @@ public class ProfileController {
         // Извлечение информации о пользователе из UserDetails
         String username = userDetails.getUsername();
         int tripCount = tripService.getTripCountForUser(username);
+        String tripTime = tripService.getFormattedTripTimeForUser(username);
         // Передача информации о пользователе в представление
         model.addAttribute("username", username);
         model.addAttribute("tripCount", tripCount);
+        model.addAttribute("tripTime", tripTime);
 
         return "profile";
     }
