@@ -2,7 +2,7 @@
 <h2>Description</h2>
 <p>This project is a web application for a car rental company, using Java, Spring, PostgreSQL. It provides users with the ability to register, log in, book cars, view their trips and manage their profile.
 
-To access the web application on the hosting, go to the following address: https://carsharing-app-deploy-latest.onrender.com
+To access the web application on the hosting, go to the following address: https://carsharing-tou0.onrender.com/
 
 After launching the application, you can use the following ways to interact with it:
 /registration - new user registration page
