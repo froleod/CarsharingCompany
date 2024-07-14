@@ -11,5 +11,11 @@ After launching the application, you can use the following ways to interact with
 /trips - the page for viewing the list of trips of the user
 /profile - user profile management page
 ![image](https://github.com/user-attachments/assets/44e03994-ed3d-4ab0-81ea-8e8d48757030)
+![image](https://github.com/user-attachments/assets/14b16997-a2f3-4263-b342-ef14854ce8f1)
+![image](https://github.com/user-attachments/assets/e77e811c-297a-43d4-8244-788b3579791d)
+![image](https://github.com/user-attachments/assets/bf6871c4-1d1a-4cc0-a8df-7099c795bc1f)
+![image](https://github.com/user-attachments/assets/38aae127-166f-489d-83dd-9050b30ca735)
+![image](https://github.com/user-attachments/assets/2410d795-c50f-4c1b-b00e-90cef5299ad1)
+![image](https://github.com/user-attachments/assets/043d58be-fe2c-44b0-9a83-5ed494260158)
 
 </p>
