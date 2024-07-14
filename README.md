@@ -16,6 +16,4 @@ After launching the application, you can use the following ways to interact with
 ![image](https://github.com/user-attachments/assets/bf6871c4-1d1a-4cc0-a8df-7099c795bc1f)
 ![image](https://github.com/user-attachments/assets/38aae127-166f-489d-83dd-9050b30ca735)
 ![image](https://github.com/user-attachments/assets/2410d795-c50f-4c1b-b00e-90cef5299ad1)
-![image](https://github.com/user-attachments/assets/043d58be-fe2c-44b0-9a83-5ed494260158)
-
 </p>
