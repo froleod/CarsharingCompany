@@ -10,4 +10,6 @@ After launching the application, you can use the following ways to interact with
 /booking - car booking page
 /trips - the page for viewing the list of trips of the user
 /profile - user profile management page
+![image](https://github.com/user-attachments/assets/44e03994-ed3d-4ab0-81ea-8e8d48757030)
+
 </p>
